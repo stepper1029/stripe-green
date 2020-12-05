@@ -1,0 +1,505 @@
+/* 
+
+This CSS file is contains the CSS rule sets for 
+    - index.html
+    - any universal elements that all pages use
+
+The CSS for the take-action.html is in take-action.css
+
+*/
+
+/************************************************/
+/************* UNIVERSAL ELEMENTS ***************/
+/************************************************/
+
+/* TODO: Customize your font properties and background color for all elements inside the <body> and <html> tags */
+body,
+html {
+  height: 100%;
+  font-size: 20px; /* Change the font size*/
+  font-family: "Roboto", sans-serif; /* Change the font */
+  line-height: 1.5em; /* Change the line height size*/
+  margin: 0em;
+  color: white; /* Change the font color*/
+  /* Change the background color */
+  background-color: #F7F2D9;
+  box-sizing: border-box;
+}
+
+h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+  /*TODO: Change the font-family property to your linked font*/
+  font-family: "Roboto Mono", sans-serif;
+  color: #43d6b9ff;
+  text-align: center;
+}
+
+/*TODO: Change the font-family property to your linked font*/
+h2 {
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-family: "Roboto Mono", sans-serif;
+  color: #43d6b9ff;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+/*TODO: Change the color of a link when a person hovers over it*/
+p a {
+  color: #43d6b9ff;
+  text-decoration: none;
+}
+
+/************************************************/
+/*************** CSS FOR NAV BAR ****************/
+/************************************************/
+
+/* All of these TODOs are optional. You should change the styling based on your mockup */
+
+/* TODO (optional): Change the background color and/or border style */
+
+ul.nav-bar {
+  /* Styling for the <ul class="nav-bar"> element */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F7F2D9;
+  border-style: solid;
+  border-color: #459AE1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* TODO (optional): Change the font size*/
+
+li.nav {
+  /* Styling for the <li class="nav"> element */
+  float: right;
+  font-size: 12px;
+}
+
+/* TODO (optional): Change the font color, decoration, and/or case */
+
+li.nav a {
+  /* Styling for the <a> elements in <li class="nav"> */
+  display: block;
+  color: #179B35;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* TODO (optional): Change the background color and/or font color when the mouse hovers over an item */
+
+li.nav a:hover {
+  /* Styling for the <a> elements when the mouse is hovering in <li class="nav"> */
+  background-color: #0D38D3;
+  color: white;
+}
+
+/************************************************/
+/*********** CSS FOR FLEXBOX HEADING ************/
+/************************************************/
+
+/* TODO: Review the CSS properties to the flexbox container for title and intro text */
+.flex-container {
+  display: flex; /* Set the flexbox display */
+  flex-direction: row; /* Configure the flex items to row */
+  flex-wrap: nowrap; /* Don’t wrap the flex items */
+  justify-content: center; /* Justify the flex items to the center */
+  align-items: center; /* Align the flex items to the center */
+
+  /* Design properties */
+  background-color: #F7F2D9;
+  padding: 5px;
+
+  /* Positioning properties */
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 40%; /* Change this value to move the box up or down */
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+/* TODO: Review the CSS properties to the flex item for the heading (the left box) */
+.heading-home {
+  padding: 2%;
+  color: #179B35;
+  background-color: #F7F2D9;
+  font-size: 50px;
+  letter-spacing: 10px;
+  line-height: 60px;
+  text-align: center;
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+/* TODO: Review the CSS properties to the flex item for the intro text (the right box) */
+.intro-text {
+  background-color: #459AE1; /* Add your own background color */
+  padding: 4%;
+  margin: 3%;
+  color: white; /* Add the color of your font */
+  font-size: 20px; /* Add your font size*/
+  letter-spacing: 2px; /* Adds space between letters */
+  line-height: 1.4em; /* Adds space between lines */
+  text-align: center;
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+/************************************************/
+/*************** PARALLAX SCROLL ****************/
+/************************************************/
+
+/*-----------TEXT SECTIONS-----------*/
+
+/* TODO (optional): Change the background color and/or text alignment */
+
+.text-section {
+  background-color: #459AE1;
+  padding: 20px 45px;
+  margin: 35px;
+  text-align: center;
+  color: white;
+}
+
+.get-educated {
+  color: #179B35;
+  background-color: white;
+  border: 5px solid white;
+}
+
+/*---------IMAGE STYLING + PARALLAX PROPERTY---------*/
+
+/* TODO: Add the CSS selector for each image to the collective image rule set */
+
+.main-message,
+.image-one, 
+.image-two {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #43d6b9ff;
+  background-size: cover; 
+  min-height: 100%; /* This adjusts the height of the image */
+
+  /* TODO: Add the property to create the parallax scrolling effect here */
+  background-attachment: fixed;
+}
+
+/* TODO: Replace the current image URL with your own. This is the top image on your homepage. */
+.main-message {
+  background-image: url("https://cdn.glitch.com/153b270c-fd5e-4bac-9d72-f7da0968bb3b%2FYLMh9EJRPhmht9GWNhiN7G-1200-80.jpg?v=1595971468554");
+}
+
+/* TODO: Replace the current image URL with your own */
+.image-one {
+  background-image: url("https://media.istockphoto.com/photos/there-is-no-plante-b-climate-change-protest-picture-id1190866489?b=1&k=6&m=1190866489&s=170667a&w=0&h=mTeg21EVV7lFsAFp-PjxjV149t99grmIOEacxxWxyeg=");
+}
+
+.image-two {
+  background-image: url("https://cdn.pixabay.com/photo/2017/09/08/18/20/garbage-2729608__480.jpg");
+}
+/* TODO: Add a second background image. Make sure you add this class selector to the collective image rule set above */
+
+/* TODO: Add more background images by repeating the process above */
+
+/*-----------IMAGE ATTRIBUTIONS (if required)-----------*/
+.attributions {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+
+.page-header {
+  background-color: #459AE1;
+  padding: 0px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+.page-title {
+  background-color: #459AE1;
+  color: white;
+}
+
+/* About Us Page */
+
+#about-body {
+  background-color: #F7F2D9;
+}
+
+
+.about-img {
+  display: flex;
+  flex-direction:row;
+  margin: 30px;
+  justify-content: space-around;
+  border-radius: 30px;
+}
+
+.about-name {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-bottom: 0px;
+}
+
+#molly-name {
+  color: #179B35;
+  margin: 0px;
+}
+
+#olivia-name {
+  color: #179B35;
+   margin: 0px;
+}
+
+#claire-name {
+  color: #179B35;
+   margin: 0px;
+}
+
+.about-blurb {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+#molly-blurb {
+  border: 5px solid #179B35;
+  background-color: #8DDBA4;
+  border-radius: 15px;
+  padding: 10px;
+  width: 270px
+}
+
+#olivia-blurb {
+  border: 5px solid #179B35;
+  background-color: #8DDBA4;
+  border-radius: 15px;
+  padding: 10px;
+  width: 270px;
+}
+
+#claire-blurb {
+  border: 5px solid #179B35;
+  background-color: #8DDBA4;
+  border-radius: 15px;
+  padding: 10px;
+  width: 270px;
+}
+
+#pfp1,
+#pfp2,
+#pfp3
+{
+  border-radius: 30px;
+}
+
+/* Environmental Issues Page*/
+
+.climate-change {
+  border:10px solid #F7F2D9; 
+}
+
+.deforestation {
+  border:10px solid #F7F2D9;
+}
+
+.pollution {
+  border:10px solid #F7F2D9;
+}
+
+.justice {
+  border:10px solid #F7F2D9;
+}
+
+.issue-title {
+  background-color: #179B35;
+  color:white;
+  text-align:left;
+  border: 10px solid #F7F2D9;
+}
+
+.question {
+  text-align:left;
+  color: #0D38D3;
+  margin-left:30px;
+}
+.answer {
+  color:#459AE1;
+  margin-left:40px;
+  margin-top:5px;
+}
+
+.link {
+  color: #459AE1;
+  text-decoration:underline;
+}
+
+.link:hover {
+  color:#262626;
+}
+
+.issues-img {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+}
+
+.source-img {
+  display:flex;
+  flex-direction:column;
+  margin:20px;
+  margin-top:0px;
+}
+
+.sustainability-img {
+  border-radius:8px;
+  border:solid #179B35 10px;
+  display:flex;
+  justify-content:center;
+}
+
+.sustainability-img {
+  border-radius:8px;
+  border:solid #179B35 10px;
+  display:flex;
+  justify-content:center;
+}
+
+.support-category {
+  background-color: #179B35;
+  border: 10px solid #F7F2D9;
+}
+
+.source {
+  font-size:15px;
+  text-align:right;
+  color:black;
+  padding-right:10px;
+}
+
+
+  
+/*sustaiability page */
+
+.sustainability-img {
+  border-radius:8px;
+  border:solid #179B35 10px;
+  display:flex;
+  justify-content:center;
+  margin: 40px;
+}
+
+  
+/* Support Page */
+
+
+.support-subhead {
+  text-align: left;
+  color: #0D38D3;
+  margin-left: 30px;
+  margin-bottom: 0px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.bullets {
+  color: #459AE1;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.link {
+color: #459AE1;
+color: #0D38D3;
+}
+
+.fastfashion {
+  background-color: #EC998D;
+  border: 5px solid #D7432D;
+  margin: 30px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 30px;
+}
+
+.extinction-rebellion {
+  background-color: #8DDBA4;
+  border: 5px solid #179B35;
+  margin: 30px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 30px;
+}
+
+.aoc {
+  background-color: #8DDBA4;
+  border: 5px solid #179B35;
+  margin: 30px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 30px;
+}
+
+.trump {
+  background-color: #EC998D;
+  border: 5px solid #D7432D;
+  margin: 30px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 30px;
+}
+
+.test {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 30px;
+  margin: 30px;
+  justify-content: space-between;
+}
+
+.allbirds {
+  background-color: #8DDBA4;
+  border: 5px solid #179B35;
+  margin: 30px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 30px;
+  
+
+
+/******************************************************/
+/***** CHANGE INDEX.HTML CSS BASED ON SCREEN SIZE *****/
+/******************************************************/
+
+/* TODO: Add a breakpoint if the screen is 700px or less */
+
+/* TODO: Add additional breakpoints based on your website's design*/
+
+
+
+/* COLOR CODES:
+    green: #179B35
+    blue: #459AE1
+    beige: #F7F2D9
+    dark blue: #0D38D3
+    light green: #8DDBA4
