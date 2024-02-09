@@ -25,7 +25,3 @@ This file contains a little bio of us, the creators.
 
 ## ← education.html
 This file helps educate our users about our cause.
-
----
-
-###### *NOTE: This project is adapted from the How To Create a To Do List by W3 Schools*
